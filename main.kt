@@ -18,8 +18,8 @@ fun instructions() {
     println("(Press ENTER to continue...)")
     readlnOrNull()
     println("Press the appropriate series of keys within $secondsToBeatLevel seconds in order to advance to the next level.")
-    println("After pressing a key you must press Enter to submit your guess")
-    println("Press Enter to begin level 1...")
+    println("After pressing a key you must press ENTER to submit your guess")
+    println("Press ENTER to begin level 1...")
     readlnOrNull()
 }
 
@@ -62,7 +62,7 @@ fun gameFoundation(keyOptions: String, level: Int): Double {
         if (count > 4 && timeTakenForLevel > secondsToBeatLevel) {
             println("Level $level FAILED. You exceeded the time requirement.")
             println("Total time taken: %.2f sec".format(timeTakenForLevel))
-            println("Press Enter to try again...")
+            println("Press ENTER to try again...")
             readlnOrNull()
             // Reset level time and count
             timeTakenForLevel = 0.0
@@ -75,12 +75,12 @@ fun gameFoundation(keyOptions: String, level: Int): Double {
     // If there are still levels left to be played show total level time and allow them to continue
     if (level < 4) {
         println("Level $level COMPLETE! Total time taken: %.2f sec".format(timeTakenForLevel))
-        println("Press Enter to begin level ${level + 1}...")
+        println("Press ENTER to begin level ${level + 1}...")
         readlnOrNull()
         // If the user completed each of the levels just show time and allow them to continue to final screen.
     } else {
         println("Level $level complete! Total time taken: %.2f sec".format(timeTakenForLevel))
-        println("Press Enter to continue...")
+        println("Press ENTER to continue...")
         readlnOrNull()
     }
 
